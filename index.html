@@ -20,27 +20,6 @@
       text-align: center;
     }
 
-    header {
-      height: 70vh;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      flex-direction: column;
-      background-color: #333; /* Fallback background */
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      padding: 0 20px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-    }
-
     section {
       padding: 20px;
     }
@@ -73,56 +52,34 @@
       font-weight: bold;
     }
 
+    /* Carousel Styles */
+    .carousel-inner img {
+      max-height: 400px; /* Set image height */
+      object-fit: cover;
+      width: 100%;
+    }
+
     /* Mobile styles */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      
-      header p {
-        font-size: 1rem;
-      }
-
-      .contact-card {
-        padding: 15px;
-      }
-
-      .carousel-item img {
-        max-height: 300px; /* Resizing carousel images */
-        object-fit: cover; /* Ensuring images are not stretched */
+      .carousel-inner img {
+        max-height: 300px; /* Resize for smaller devices */
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to Party Mowa</h1>
-    <p>Your Stage for Life's Most Unforgettable Celebrations</p>
-  </header>
 
   <!-- Carousel Section -->
   <section>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-      </div>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="pw1.jpg" class="d-block w-75 mx-auto" alt="Party Mowa Slide 1">
+          <img src="pw1.jpg" class="d-block w-100" alt="Party Mowa Slide 1">
         </div>
         <div class="carousel-item">
-          <img src="pw2.jpg" class="d-block w-75 mx-auto" alt="Party Mowa Slide 2">
+          <img src="pw2.jpg" class="d-block w-100" alt="Party Mowa Slide 2">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
   </section>
   <section>
@@ -136,5 +93,8 @@
   <section class="stay-tuned">
     <p>Stay tuned, we will be live soon!</p>
   </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
