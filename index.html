@@ -21,7 +21,6 @@
     }
 
     header {
-      background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('partymowa.jpeg') no-repeat center center/cover;
       height: 70vh;
       color: white;
       display: flex;
@@ -29,6 +28,7 @@
       justify-content: center;
       text-align: center;
       flex-direction: column;
+      background-color: #333; /* Fallback background */
     }
 
     header h1 {
@@ -86,6 +86,11 @@
       .contact-card {
         padding: 15px;
       }
+
+      .carousel-item img {
+        max-height: 300px; /* Resizing carousel images */
+        object-fit: cover; /* Ensuring images are not stretched */
+      }
     }
   </style>
 </head>
@@ -104,10 +109,10 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="pw1.jpg" class="d-block w-100" alt="Party Mowa Slide 1">
+          <img src="pw1.jpg" class="d-block w-75 mx-auto" alt="Party Mowa Slide 1">
         </div>
         <div class="carousel-item">
-          <img src="pw2.jpg" class="d-block w-100" alt="Party Mowa Slide 2">
+          <img src="pw2.jpg" class="d-block w-75 mx-auto" alt="Party Mowa Slide 2">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
